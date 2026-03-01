@@ -1,6 +1,6 @@
 
 import type { User } from '../../types';
-import { extractAuthNode, hashPassword, validatePasswordStrength, nodeUnauthorized, nodeForbidden } from '../lib/auth';
+import { extractAuthNode, hashPassword, validatePasswordStrength, nodeUnauthorized, nodeForbidden } from '../../lib/auth';
 
 const KEY_ADMINS = 'admin.json';
 
