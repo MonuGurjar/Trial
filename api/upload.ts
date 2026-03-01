@@ -1,5 +1,6 @@
 
-import crypto from 'crypto';
+import * as cryptoModule from 'crypto';
+const crypto = (cryptoModule as any).default || cryptoModule;
 import { extractAuthNode, nodeUnauthorized } from './lib/auth';
 
 export default async function handler(request: any, response: any) {

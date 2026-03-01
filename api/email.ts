@@ -1,5 +1,6 @@
 
-import nodemailer from 'nodemailer';
+import * as nodemailerModule from 'nodemailer';
+const nodemailer = (nodemailerModule as any).default || nodemailerModule;
 import { extractAuthNode, nodeUnauthorized, nodeForbidden, nodeTooManyRequests } from './lib/auth';
 import { emailLimiter } from './lib/rateLimit';
 

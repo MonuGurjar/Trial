@@ -1,6 +1,9 @@
 
 import { SignJWT, jwtVerify } from 'jose';
-import bcrypt from 'bcryptjs';
+import * as bcryptModule from 'bcryptjs';
+
+// Handle CJS/ESM interop — bcryptjs is a CJS module
+const bcrypt = (bcryptModule as any).default || bcryptModule;
 
 // --- JWT ---
 
